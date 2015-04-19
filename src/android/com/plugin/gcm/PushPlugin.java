@@ -111,7 +111,7 @@ public class PushPlugin extends CordovaPlugin {
 				 "_method(_obj);  "+//Send the message
 
 				 "if (_rec < _msgs.length-1)  "+ //Call this function again for the next message in the list
-				    " window.setTimeout(function(){alert('4 messages: '+_msgs); onMsgReceived(_method, _obj, _msgs, _rec + 1);}, 300); "+
+				    " window.setTimeout(function(){onMsgReceived(_method, _obj, _msgs, _rec + 1);}, 300); "+
 			"} else {  "+
 			   "_method(_obj);  "+
 			"} "+
